@@ -21,3 +21,4 @@ coverage/
 *.iml
 .DS_Store
 Thumbs.db
+/data/

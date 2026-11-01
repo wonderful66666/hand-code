@@ -1,9 +1,26 @@
 spring:
   application:
     name: WithYourHandYmy
+  datasource:
+    # DB_CLOSE_DELAY=-1 是其中一个线程关闭后，数据库仍在
+    # DB_CLOSE_EXIT=FALSE 是说是否让SpringBoot管理数据库
+    # 使用jdbc引擎连接一个h2的内存数据库，数据库名称使用ymy
+    # url: jdbc:h2:mem:ymy;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE 内存数据库
+    username: sa
+    password: ""
+    url: jdbc:h2:file:./data/ymy;DB_CLOSE_ON_EXIT=FALSE
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  sql:
+    init:
+      mode: always   #文件数据库也进行sql文件执行
 server:
   address: ${SERVER_ADDRESS:127.0.0.1}
   port: ${YMY_PORT:8082}
+
+
 management:
   endpoints:
     web:
