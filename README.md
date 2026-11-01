@@ -54,10 +54,12 @@ powershell -ExecutionPolicy Bypass -File .\scripts\dev.ps1 frontend
 
 ## 开始写今天的代码
 
-1. 从 `main` 创建分支，例如 `qbh/day-001-hello` 或 `ymy/day-001-hello`。
+1. 切换到自己的固定分支：Ymy 使用 `ymy`，QBH 使用 `qbh`。首次使用前执行 `git fetch origin`，再执行 `git switch ymy` 或 `git switch qbh`。
 2. 在自己的 Java 项目或共享前端 / Rust 项目中实现一个小功能。
 3. 按 [每日模板](days/TEMPLATE.md) 记录做了什么、怎么验证、学到了什么。
-4. 运行校验并提交，通过 Pull Request 合并。
+4. 运行校验并提交到自己的分支，通过 `ymy → main` 或 `qbh → main` 的 Pull Request 合并。
+
+每天开发前，先提交手头已有改动，再在自己的分支执行 `git fetch origin`、`git merge origin/main`，同步伙伴已合并的成果。合并 Pull Request 时使用 **Create a merge commit**，并保留个人分支，下一次继续使用。
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\verify.ps1
