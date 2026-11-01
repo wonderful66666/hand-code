@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: WithYourHandYmy
+server:
+  address: ${SERVER_ADDRESS:127.0.0.1}
+  port: ${YMY_PORT:8082}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never

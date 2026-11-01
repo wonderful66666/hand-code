@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: WithYourHandQBH
+server:
+  address: ${SERVER_ADDRESS:127.0.0.1}
+  port: ${QBH_PORT:8081}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never

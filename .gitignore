@@ -1,0 +1,23 @@
+# Dependencies, downloads, caches and temporary files stay local.
+.cache/
+node_modules/
+target/
+dist/
+coverage/
+*.log
+*.pid
+
+# Local secrets and machine settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pub
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.iml
+.DS_Store
+Thumbs.db
