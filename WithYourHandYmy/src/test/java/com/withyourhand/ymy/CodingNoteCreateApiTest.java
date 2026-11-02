@@ -107,8 +107,8 @@ public class CodingNoteCreateApiTest {
             assertThat(response.statusCode()).isEqualTo(201);
             JsonNode test_create = jsonMapper.readTree(response.body());
             assertThat(test_create.isObject()).isTrue();
-            assertThat(test_create.get(0).get("id").longValue()).isPositive();
-            assertThat(test_create.get(0).get("content").asString()).isEqualTo(content);
+            assertThat(test_create.get("id").longValue()).isPositive();
+            assertThat(test_create.get("content").asString()).isEqualTo(content);
         }
 
         Long count = jdbcTemplate.queryForObject(

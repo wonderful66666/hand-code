@@ -22,11 +22,9 @@ import java.util.List;
 public class CodingNoteController {
 
     public final JdbcTemplate jdbcTemplate;
-    private final StartupEndpoint startupEndpoint;
 
     public CodingNoteController(JdbcTemplate jdbcTemplate, StartupEndpoint startupEndpoint) {
         this.jdbcTemplate = jdbcTemplate;
-        this.startupEndpoint = startupEndpoint;
     }
 
 
