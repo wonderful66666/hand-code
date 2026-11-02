@@ -2,8 +2,6 @@ package com.withyourhand.ymy.api;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.actuate.startup.StartupEndpoint;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -12,7 +10,6 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.*;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.List;
@@ -23,7 +20,7 @@ public class CodingNoteController {
 
     public final JdbcTemplate jdbcTemplate;
 
-    public CodingNoteController(JdbcTemplate jdbcTemplate, StartupEndpoint startupEndpoint) {
+    public CodingNoteController(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
