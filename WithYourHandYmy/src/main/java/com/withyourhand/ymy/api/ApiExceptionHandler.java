@@ -14,5 +14,7 @@ public class ApiExceptionHandler {
         return new ApiError("INVALID_ARGUMENT", "name 必须为 1–50 个字符，且不能全部为空白。");
     }
 
-    public record ApiError(String code, String message) {}
+    public record ApiError(String code, String message) {
+        
+    }
 }
